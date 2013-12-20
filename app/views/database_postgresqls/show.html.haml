@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @database_postgresql.topic.try(:name)
+%p
+  %b Description:
+  = @database_postgresql.topic.try(:description)
+
+= link_to 'Edit', edit_database_postgresql_path(@database_postgresql),:class=>"btn btn-warning"
+\|
+= link_to 'Back', database_postgresqls_path,:class=>"btn btn-inverse"

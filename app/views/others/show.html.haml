@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @other.topic.try(:name)
+%p
+  %b Description:
+  = @other.topic.try(:description)
+
+= link_to 'Edit', edit_other_path(@other),:class=>"btn btn-warning"
+\|
+= link_to 'Back', others_path,:class=>"btn btn-inverse"

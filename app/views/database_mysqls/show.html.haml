@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @database_mysql.topic.try(:name)
+%p
+  %b Description:
+  = @database_mysql.topic.try(:description)
+
+= link_to 'Edit', edit_database_mysql_path(@database_mysql),:class=>"btn btn-warning"
+\|
+= link_to 'Back', database_mysqls_path,:class=>"btn btn-inverse"

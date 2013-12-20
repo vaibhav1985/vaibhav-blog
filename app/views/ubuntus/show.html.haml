@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @ubuntu.topic.try(:name)
+%p
+  %b Description:
+  = @ubuntu.topic.try(:description)
+
+= link_to 'Edit', edit_ubuntu_path(@ubuntu),:class=>"btn btn-warning"
+\|
+= link_to 'Back', ubuntus_path,:class=>"btn btn-inverse"

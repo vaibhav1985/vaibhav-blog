@@ -1,0 +1,19 @@
+%h1 Listing database_mysqls
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @database_mysqls.each do |database_mysql|
+    %tr
+      %td= database_mysql.topic.try(:name)
+      %td= link_to 'Show', database_mysql,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_database_mysql_path(database_mysql),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', database_mysql, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Database mysql', new_database_mysql_path,:class=>"btn btn-primary"

@@ -1,0 +1,4 @@
+= simple_form_for(@ajax) do |f|
+  = f.error_notification
+  =# render 'shared/common_info', :locals => {:f => f} 
+  = render partial: 'shared/common_info', locals: {:f => f} 

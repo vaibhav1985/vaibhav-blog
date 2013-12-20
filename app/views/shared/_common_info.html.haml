@@ -1,0 +1,9 @@
+.form-inputs
+  = f.fields_for :topic, :wrapper => false do |tpo|
+    = tpo.input :name,:label => "Topic Name"       
+    = tpo.input :description,:label => "Topic Description",:as=>:text,:input_html => { :style=>"width: 460px;  height: 198px;"}
+  .form-actions
+    -if params[:action]=="new"
+      = f.button :submit ,:class=>"btn btn-primary"
+    -else
+      = f.button :submit ,:class=>"btn btn-success" 

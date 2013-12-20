@@ -1,0 +1,2 @@
+module JavaStrutsHelper
+end

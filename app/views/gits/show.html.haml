@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @git.topic.try(:name)
+%p
+  %b Description:
+  = @git.topic.try(:description)
+
+= link_to 'Edit', edit_git_path(@git),:class=>"btn btn-warning"
+\|
+= link_to 'Back', gits_path,:class=>"btn btn-inverse"

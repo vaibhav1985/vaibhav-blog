@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @uranium_j.topic.try(:name)
+%p
+  %b Description:
+  = @uranium_j.topic.try(:description)
+
+= link_to 'Edit', edit_uranium_j_path(@uranium_j),:class=>"btn btn-warning"
+\|
+= link_to 'Back', uranium_js_path,:class=>"btn btn-inverse"

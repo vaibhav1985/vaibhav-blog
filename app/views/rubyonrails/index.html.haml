@@ -1,0 +1,19 @@
+%h1 Listing rubyonrails
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @rubyonrails.each do |rubyonrail|
+    %tr
+      %td= rubyonrail.topic.try(:name)
+      %td= link_to 'Show', rubyonrail,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_rubyonrail_path(rubyonrail),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', rubyonrail, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Rubyonrail', new_rubyonrail_path,:class=>"btn btn-primary"

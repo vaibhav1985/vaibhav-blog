@@ -1,0 +1,19 @@
+%h1 Listing ubuntus
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @ubuntus.each do |ubuntu|
+    %tr
+      %td= ubuntu.topic.try(:name)
+      %td= link_to 'Show', ubuntu,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_ubuntu_path(ubuntu),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', ubuntu, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Ubuntu', new_ubuntu_path,:class=>"btn btn-primary"

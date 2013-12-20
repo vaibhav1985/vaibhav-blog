@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @java_hibernate.topic.try(:name)
+%p
+  %b Description:
+  = @java_hibernate.topic.try(:description)
+
+= link_to 'Edit', edit_java_hibernate_path(@java_hibernate),:class=>"btn btn-warning"
+\|
+= link_to 'Back', java_hibernates_path,:class=>"btn btn-inverse"

@@ -1,0 +1,19 @@
+%h1 Listing tritia
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @tritia.each do |tritium|
+    %tr
+      %td= tritium.topic.try(:name)
+      %td= link_to 'Show', tritium,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_tritium_path(tritium),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', tritium, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Tritium', new_tritium_path,:class=>"btn btn-primary"

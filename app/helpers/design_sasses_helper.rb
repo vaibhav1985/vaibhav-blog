@@ -1,0 +1,2 @@
+module DesignSassesHelper
+end

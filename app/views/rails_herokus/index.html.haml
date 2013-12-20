@@ -1,0 +1,19 @@
+%h1 Listing rails_herokus
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @rails_herokus.each do |rails_heroku|
+    %tr
+      %td= rails_heroku.topic.try(:name)
+      %td= link_to 'Show', rails_heroku,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_rails_heroku_path(rails_heroku),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', rails_heroku, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Rails heroku', new_rails_heroku_path,:class=>"btn btn-primary"

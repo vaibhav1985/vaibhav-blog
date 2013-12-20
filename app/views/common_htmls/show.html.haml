@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @common_html.topic.try(:name)
+%p
+  %b Description:
+  = @common_html.topic.try(:description)
+
+= link_to 'Edit', edit_common_html_path(@common_html),:class=>"btn btn-warning"
+\|
+= link_to 'Back', common_htmls_path,:class=>"btn btn-inverse"

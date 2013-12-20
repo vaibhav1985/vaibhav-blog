@@ -1,0 +1,3 @@
+= simple_form_for(@database_mysql) do |f|
+  = f.error_notification
+  = render partial: 'shared/common_info', locals: {:f => f} 

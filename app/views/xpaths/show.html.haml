@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @xpath.topic.try(:name)
+%p
+  %b Description:
+  = @xpath.topic.try(:description)
+
+= link_to 'Edit', edit_xpath_path(@xpath),:class=>"btn btn-warning"
+\|
+= link_to 'Back', xpaths_path,:class=>"btn btn-inverse"

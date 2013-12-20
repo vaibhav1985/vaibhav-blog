@@ -1,0 +1,38 @@
+<h1>MY SKILLS</h1> 
+
+<%if user_signed_in? %>
+<h1>TEST</h1>
+<hr><p>TOPICS</p> -
+<hr><p>TEST2</p>
+<h2>
+<a name="links" class="anchor" href="#links"><span class="mini-icon mini-icon-link"></span></a>Links</h3>
+<ul>
+<li><p><%=link_to "AJAX",ajaxes_path%></p></li>
+<li><p><%=link_to "CSS",csses_path%></p></li>
+<li><p><%=link_to "GEM",gemrubies_path%></p></li>
+<li><p><%=link_to "GIT",gits_path%></p></li>
+<li><p><%=link_to "HAML",rails_hamls_path%></p></li>
+<li><p><%=link_to "HEROKU",rails_herokus_path%></p></li>
+<li><p><%=link_to "HIBERNATE",java_hibernates_path%></p></li>
+<li><p><%=link_to "HTML",common_htmls_path%></p></li>
+<li><p><%=link_to "JQUERY",global_jqueries_path%></p></li>
+<li><p><%=link_to "JSP",java_jsps_path%></p></li>
+<li><p><%=link_to "MYSQL",database_mysqls_path%></p></li>
+<li><p><%=link_to "POSTGRESQL",database_postgresqls_path%></p></li>
+<li><p><%=link_to "RUBY",rubies_path%></p></li>
+<li><p><%=link_to "RUBY ON RAILS",rubyonrails_path%></p></li>
+<li><p><%=link_to "SASS",design_sasses_path%></p></li>
+<li><p><%=link_to "STRUTS",java_struts_path%></p></li>
+<li><p><%=link_to "TRITIUM",tritia_path%></p></li>
+<li><p><%=link_to "URANIUM JS",uranium_js_path%></p></li>
+<li><p><%=link_to "XPATH",xpaths_path%></p></li>
+<li><p><%=link_to "UBUNTU",ubuntus_path%></p></li>
+<li><p><%=link_to "INSTALL",installs_path%></p></li> 
+<li><p><%=link_to "OTHERS",others_path%></p></li> 
+
+
+
+<%else%>
+<h1>My Home</h1>
+<%end%>
+        

@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @rails_heroku.topic.try(:name)
+%p
+  %b Description:
+  = @rails_heroku.topic.try(:description)
+
+= link_to 'Edit', edit_rails_heroku_path(@rails_heroku),:class=>"btn btn-warning"
+\|
+= link_to 'Back', rails_herokus_path,:class=>"btn btn-inverse"

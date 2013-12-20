@@ -1,0 +1,19 @@
+%h1 Listing global_jqueries
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @global_jqueries.each do |global_jquery|
+    %tr
+      %td= global_jquery.topic.try(:name)
+      %td= link_to 'Show', global_jquery,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_global_jquery_path(global_jquery),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', global_jquery, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Global jquery', new_global_jquery_path,:class=>"btn btn-primary"

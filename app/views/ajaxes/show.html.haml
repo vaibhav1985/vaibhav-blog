@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @ajax.topic.try(:name)
+%p
+  %b Description:
+  = @ajax.topic.try(:description)
+
+= link_to 'Edit', edit_ajax_path(@ajax),:class=>"btn btn-warning"
+\|
+= link_to 'Back', ajaxes_path,:class=>"btn btn-inverse"

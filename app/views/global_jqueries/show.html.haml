@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @global_jquery.topic.try(:name)
+%p
+  %b Description:
+  = @global_jquery.topic.try(:description)
+
+= link_to 'Edit', edit_global_jquery_path(@global_jquery),:class=>"btn btn-warning"
+\|
+= link_to 'Back', global_jqueries_path,:class=>"btn btn-inverse"

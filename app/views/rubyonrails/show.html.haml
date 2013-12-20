@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @rubyonrail.topic.try(:name)
+%p
+  %b Description:
+  = @rubyonrail.topic.try(:description)
+
+= link_to 'Edit', edit_rubyonrail_path(@rubyonrail),:class=>"btn btn-warning"
+\|
+= link_to 'Back', rubyonrails_path,:class=>"btn btn-inverse"

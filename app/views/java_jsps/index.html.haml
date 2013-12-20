@@ -1,0 +1,19 @@
+%h1 Listing java_jsps
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @java_jsps.each do |java_jsp|
+    %tr
+      %td= java_jsp.topic.try(:name)
+      %td= link_to 'Show', java_jsp,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_java_jsp_path(java_jsp),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', java_jsp, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Java jsp', new_java_jsp_path,:class=>"btn btn-primary"

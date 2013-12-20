@@ -1,0 +1,19 @@
+%h1 Listing rubies
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @rubies.each do |ruby|
+    %tr
+      %td= ruby.topic.try(:name)
+      %td= link_to 'Show', ruby,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_ruby_path(ruby),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', ruby, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Ruby', new_ruby_path,:class=>"btn btn-primary"

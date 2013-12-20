@@ -1,0 +1,19 @@
+%h1 Listing java_hibernates
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @java_hibernates.each do |java_hibernate|
+    %tr
+      %td= java_hibernate.topic.try(:name)
+      %td= link_to 'Show', java_hibernate,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_java_hibernate_path(java_hibernate),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', java_hibernate, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Java hibernate', new_java_hibernate_path,:class=>"btn btn-primary"

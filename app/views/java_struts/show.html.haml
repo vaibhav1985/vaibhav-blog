@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @java_strut.topic.try(:name)
+%p
+  %b Description:
+  = @java_strut.topic.try(:description)
+
+= link_to 'Edit', edit_java_strut_path(@java_strut),:class=>"btn btn-warning"
+\|
+= link_to 'Back', java_struts_path,:class=>"btn btn-inverse"

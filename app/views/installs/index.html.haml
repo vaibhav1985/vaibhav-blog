@@ -1,0 +1,19 @@
+%h1 Listing installs
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @installs.each do |install|
+    %tr
+      %td= install.topic.try(:name)
+      %td= link_to 'Show', install,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_install_path(install),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', install, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Install', new_install_path,:class=>"btn btn-primary"

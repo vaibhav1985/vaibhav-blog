@@ -1,0 +1,2 @@
+module RailsHamlsHelper
+end

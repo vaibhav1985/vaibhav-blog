@@ -1,0 +1,19 @@
+%h1 Listing rails_hamls
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @rails_hamls.each do |rails_haml|
+    %tr
+      %td= rails_haml.topic.try(:name)
+      %td= link_to 'Show', rails_haml,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_rails_haml_path(rails_haml),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', rails_haml, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Rails haml', new_rails_haml_path,:class=>"btn btn-primary"

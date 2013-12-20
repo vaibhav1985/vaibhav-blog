@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @design_sass.topic.try(:name)
+%p
+  %b Description:
+  = @design_sass.topic.try(:description)
+
+= link_to 'Edit', edit_design_sass_path(@design_sass),:class=>"btn btn-warning"
+\|
+= link_to 'Back', design_sasses_path,:class=>"btn btn-inverse"

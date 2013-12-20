@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @gemruby.topic.try(:name)
+%p
+  %b Description:
+  = @gemruby.topic.try(:description)
+
+= link_to 'Edit', edit_gemruby_path(@gemruby),:class=>"btn btn-warning"
+\|
+= link_to 'Back', gemrubies_path,:class=>"btn btn-inverse"

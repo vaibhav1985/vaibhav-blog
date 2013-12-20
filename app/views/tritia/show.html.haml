@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @tritium.topic.try(:name)
+%p
+  %b Description:
+  = @tritium.topic.try(:description)
+
+= link_to 'Edit', edit_tritium_path(@tritium),:class=>"btn btn-warning"
+\|
+= link_to 'Back', tritia_path,:class=>"btn btn-inverse"

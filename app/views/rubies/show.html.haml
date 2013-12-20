@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @ruby.topic.try(:name)
+%p
+  %b Description:
+  = @ruby.topic.try(:description)
+
+= link_to 'Edit', edit_ruby_path(@ruby),:class=>"btn btn-warning"
+\|
+= link_to 'Back', rubies_path,:class=>"btn btn-inverse"

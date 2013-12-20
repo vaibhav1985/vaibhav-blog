@@ -1,0 +1,19 @@
+%h1 Listing design_sasses
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @design_sasses.each do |design_sass|
+    %tr
+      %td= design_sass.topic.try(:name)
+      %td= link_to 'Show', design_sass,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_design_sass_path(design_sass),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', design_sass, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Design sass', new_design_sass_path,:class=>"btn btn-primary"

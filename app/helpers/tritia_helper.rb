@@ -1,0 +1,2 @@
+module TritiaHelper
+end

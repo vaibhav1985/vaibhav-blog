@@ -1,0 +1,19 @@
+%h1 Listing database_postgresqls
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @database_postgresqls.each do |database_postgresql|
+    %tr
+      %td= database_postgresql.topic.try(:name)
+      %td= link_to 'Show', database_postgresql,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_database_postgresql_path(database_postgresql),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', database_postgresql, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Database postgresql', new_database_postgresql_path,:class=>"btn btn-primary"

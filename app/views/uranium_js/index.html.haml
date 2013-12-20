@@ -1,0 +1,19 @@
+%h1 Listing uranium_js
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @uranium_js.each do |uranium_j|
+    %tr
+      %td= uranium_j.topic.try(:name)
+      %td= link_to 'Show', uranium_j,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_uranium_j_path(uranium_j),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', uranium_j, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Uranium j', new_uranium_j_path,:class=>"btn btn-primary"

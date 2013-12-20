@@ -1,0 +1,19 @@
+%h1 Listing csses
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @csses.each do |css|
+    %tr
+      %td= css.topic.try(:name)
+      %td= link_to 'Show', css,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_css_path(css),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', css, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Css', new_css_path,:class=>"btn btn-primary"

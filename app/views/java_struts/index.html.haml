@@ -1,0 +1,19 @@
+%h1 Listing java_struts
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @java_struts.each do |java_strut|
+    %tr
+      %td= java_strut.topic.try(:name)
+      %td= link_to 'Show', java_strut,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_java_strut_path(java_strut),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', java_strut, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Java strut', new_java_strut_path,:class=>"btn btn-primary"

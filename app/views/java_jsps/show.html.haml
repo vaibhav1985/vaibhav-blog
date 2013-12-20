@@ -1,0 +1,11 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @java_jsp.topic.try(:name)
+%p
+  %b Description:
+  = @java_jsp.topic.try(:description)
+= link_to 'Edit', edit_java_jsp_path(@java_jsp),:class=>"btn btn-warning"
+\|
+= link_to 'Back', java_jsps_path,:class=>"btn btn-inverse"

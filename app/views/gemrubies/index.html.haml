@@ -1,0 +1,19 @@
+%h1 Listing gemrubies
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @gemrubies.each do |gemruby|
+    %tr
+      %td= gemruby.topic.try(:name)
+      %td= link_to 'Show', gemruby,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_gemruby_path(gemruby),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', gemruby, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Gemruby', new_gemruby_path,:class=>"btn btn-primary"

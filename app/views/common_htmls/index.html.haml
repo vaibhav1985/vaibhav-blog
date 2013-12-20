@@ -1,0 +1,19 @@
+%h1 Listing common_htmls
+
+%table
+  %tr
+    %th Topic Name
+    %th{:colspan => "3"} Action
+    %th
+    %th
+
+  - @common_htmls.each do |common_html|
+    %tr
+      %td= common_html.topic.try(:name)
+      %td= link_to 'Show', common_html,:class=>"btn btn-info"
+      %td= link_to 'Edit', edit_common_html_path(common_html),:class=>"btn btn-warning"
+      %td= link_to 'Destroy', common_html, :method => :delete, :data => { :confirm => 'Are you sure?' },:class=>"btn btn-danger"
+
+%br
+
+= link_to 'New Common html', new_common_html_path,:class=>"btn btn-primary"

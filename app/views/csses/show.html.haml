@@ -1,0 +1,11 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @css.topic.try(:name)
+%p
+  %b Description:
+  = @css.topic.try(:description)
+
+= link_to 'Edit', edit_css_path(@css),:class=>"btn btn-warning"
+\|
+= link_to 'Back', csses_path,:class=>"btn btn-inverse"
