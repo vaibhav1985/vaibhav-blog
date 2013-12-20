@@ -1,6 +1,6 @@
 class DatabasePostgresqlsController < ApplicationController
 	 before_action :set_database_postgresql, only: [:show, :edit, :update, :destroy]
-
+   before_filter :authenticate_user! 
   # GET /database_postgresqls
   # GET /database_postgresqls.json
   def index

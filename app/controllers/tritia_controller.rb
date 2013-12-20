@@ -1,6 +1,6 @@
 class TritiaController < ApplicationController
-	 before_action :set_tritium, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_tritium, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user! 
   # GET /tritia
   # GET /tritia.json
   def index

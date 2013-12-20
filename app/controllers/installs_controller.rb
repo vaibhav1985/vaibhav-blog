@@ -1,6 +1,6 @@
 class InstallsController < ApplicationController
-	 before_action :set_install, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_install, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!  
   # GET /installs
   # GET /installs.json
   def index

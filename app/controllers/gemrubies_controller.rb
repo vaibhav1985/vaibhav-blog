@@ -1,6 +1,6 @@
 class GemrubiesController < ApplicationController
 	before_action :set_gemruby, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /gemrubies
   # GET /gemrubies.json
   def index

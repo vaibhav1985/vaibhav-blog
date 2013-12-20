@@ -1,6 +1,6 @@
 class RailsHamlsController < ApplicationController
-	 before_action :set_rails_haml, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_rails_haml, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user! 
   # GET /rails_hamls
   # GET /rails_hamls.json
   def index

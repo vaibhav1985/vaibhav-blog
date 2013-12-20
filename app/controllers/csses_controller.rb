@@ -1,6 +1,6 @@
 class CssesController < ApplicationController
   before_action :set_css, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /csses
   # GET /csses.json
   def index

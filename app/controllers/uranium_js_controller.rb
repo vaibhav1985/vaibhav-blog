@@ -1,6 +1,6 @@
 class UraniumJsController < ApplicationController
   before_action :set_uranium_j, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /uranium_js
   # GET /uranium_js.json
   def index

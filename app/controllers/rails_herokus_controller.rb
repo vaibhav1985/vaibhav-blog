@@ -1,6 +1,6 @@
 class RailsHerokusController < ApplicationController
-	 before_action :set_rails_heroku, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_rails_heroku, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user! 
   # GET /rails_herokus
   # GET /rails_herokus.json
   def index

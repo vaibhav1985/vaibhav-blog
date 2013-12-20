@@ -1,6 +1,6 @@
 class OthersController < ApplicationController
-	 before_action :set_other, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_other, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user! 
   # GET /others
   # GET /others.json
   def index

@@ -1,6 +1,6 @@
 class AjaxesController < ApplicationController
 	before_action :set_ajax, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /ajaxes
   # GET /ajaxes.json
   def index

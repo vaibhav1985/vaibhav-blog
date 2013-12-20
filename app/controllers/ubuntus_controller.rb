@@ -1,6 +1,6 @@
 class UbuntusController < ApplicationController
 	before_action :set_ubuntu, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /ubuntus
   # GET /ubuntus.json
   def index

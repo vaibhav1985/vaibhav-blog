@@ -1,6 +1,6 @@
 class CommonHtmlsController < ApplicationController
 	 before_action :set_common_html, only: [:show, :edit, :update, :destroy]
-
+   before_filter :authenticate_user! 
   # GET /common_htmls
   # GET /common_htmls.json
   def index

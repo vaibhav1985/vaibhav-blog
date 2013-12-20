@@ -1,6 +1,6 @@
 class DesignSassesController < ApplicationController
 	 before_action :set_design_sass, only: [:show, :edit, :update, :destroy]
-
+   before_filter :authenticate_user! 
   # GET /design_sasses
   # GET /design_sasses.json
   def index

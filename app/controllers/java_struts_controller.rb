@@ -1,6 +1,6 @@
 class JavaStrutsController < ApplicationController
   before_action :set_java_strut, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /java_struts
   # GET /java_struts.json
   def index

@@ -1,6 +1,6 @@
 class JavaJspsController < ApplicationController
-	 before_action :set_java_jsp, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_java_jsp, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user! 
   # GET /java_jsps
   # GET /java_jsps.json
   def index

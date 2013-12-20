@@ -1,6 +1,6 @@
 class DatabaseMysqlsController < ApplicationController
 	before_action :set_database_mysql, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /database_mysqls
   # GET /database_mysqls.json
   def index

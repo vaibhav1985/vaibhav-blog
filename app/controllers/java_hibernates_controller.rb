@@ -1,6 +1,6 @@
 class JavaHibernatesController < ApplicationController
 	before_action :set_java_hibernate, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /java_hibernates
   # GET /java_hibernates.json
   def index

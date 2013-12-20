@@ -1,6 +1,6 @@
 class RubiesController < ApplicationController
-	 before_action :set_ruby, only: [:show, :edit, :update, :destroy]
-
+	before_action :set_ruby, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user! 
   # GET /rubies
   # GET /rubies.json
   def index

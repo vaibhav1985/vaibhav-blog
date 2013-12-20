@@ -1,6 +1,6 @@
 class GitsController < ApplicationController
 	before_action :set_git, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /gits
   # GET /gits.json
   def index

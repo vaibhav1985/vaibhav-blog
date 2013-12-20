@@ -1,6 +1,6 @@
 class GlobalJqueriesController < ApplicationController
 	before_action :set_global_jquery, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /global_jqueries
   # GET /global_jqueries.json
   def index

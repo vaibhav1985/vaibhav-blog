@@ -1,6 +1,6 @@
 class RubyonrailsController < ApplicationController
 	before_action :set_rubyonrail, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /rubyonrails
   # GET /rubyonrails.json
   def index

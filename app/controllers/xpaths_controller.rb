@@ -1,6 +1,6 @@
 class XpathsController < ApplicationController
 	before_action :set_xpath, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user! 
   # GET /xpaths
   # GET /xpaths.json
   def index
